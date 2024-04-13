@@ -1,0 +1,45 @@
+
+4.mkdir SI_2024_lab1_225104
+git init
+5.$git remote add origin https://github.com/DimitarBogojoski/SI_2024_lab1_225104.git
+6.$ nano README.md
+  $ git add .
+  $ git commit -m "Initial commit"
+7.$ git add .
+  $ git commit -m "Add starter code"
+8.$ git push origin master
+9.$ git switch -C bug1
+  $ git checkout master
+  $ git switch -C bug2
+10.$ git checkout bug1
+11.$ nano SILab1_1.java
+   $ git commit -am "Fix wrong condition in filterOddLengthStrings"
+12.$ git checkout bug2
+13.$ nano SILab1_2.java
+   $ git commit -am  "Fix wrong condition in makeBigStringFrom"
+14.$ git switch bug1
+15.$ nano SILab1Main.java
+   $ git commit -am  "Call method filterOddLengthStrings in main class."
+16.$ git switch bug2
+17.$ nano SILab1Main.java
+   $ git commit -am  "Call method makeBigStringFrom in main class."
+18.$ git push origin master
+   $ git push origin bug1
+   $ git push origin bug2
+19.$ git checkout master
+20.$ git merge bug1 (FF(Fast-Forward))
+21.$ git push origin --all
+22.$ git switch bug2
+23.$ git rebase master (successful)
+24.$ git checkout master
+25.$ git merge bug2 (FF(Fast-Forward))
+26.$ git push origin master
+   $ git push origin bug1
+   $ git push origin bug2 (PROBLEM!!!)
+27.$ git push origin bug2 --force (Problem Fix *phew*)
+28.$ git log --oneline
+   $ nano logs.txt
+   $ nano 225104.txt
+   $ git add .
+   $ git commit -m "Final commit"
+29.$ git push origin --all
